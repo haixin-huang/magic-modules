@@ -296,6 +296,7 @@ properties:
       properties:
         - name: 'projectIdOrNum'
           type: String
+          default_value: ""
           # TODO: add exactly_one_of when it can be applied to lists (https://github.com/hashicorp/terraform-plugin-sdk/issues/470)
           description: |
             A project that is allowed to connect to this service attachment.
@@ -303,6 +304,7 @@ properties:
           is_missing_in_cai: true
         - name: 'networkUrl'
           type: String
+          default_value: ""
           # TODO: add exactly_one_of when it can be applied to lists (https://github.com/hashicorp/terraform-plugin-sdk/issues/470)
           description: |
             The network that is allowed to connect to this service attachment.
@@ -310,6 +312,7 @@ properties:
           diff_suppress_func: 'tpgresource.CompareSelfLinkRelativePaths'
         - name: 'endpointUrl'
           type: String
+          default_value: ""
           description: |
             The endpoint that is allowed to connect to this service attachment.
             Only one of project_id_or_num, network_url and endpoint_url may be set.
